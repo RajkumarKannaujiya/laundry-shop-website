@@ -101,18 +101,6 @@
         .nav-link { position: relative; padding-bottom: 4px; }
         .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #1E90FF; transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
-
-        @keyframes infinite-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
-        }
-        .animate-infinite-scroll { animation: infinite-scroll 40s linear infinite; }
-
-        @keyframes testimonial-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(calc(-100% / 2)); }
-        }
-        .animate-testimonial-scroll { animation: testimonial-scroll 60s linear infinite; }
     </style>
 
     <!-- JSON-LD Schema Markup -->
@@ -205,7 +193,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="services" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="section-title">Our Garment Care Services</h2>
@@ -239,34 +227,49 @@
             </div>
         </section>
 
-        <section id="why-choose-us" class="py-16 md:py-24 bg-white">
+        <!-- Custom Instagram Feed Slider -->
+        <section id="instagram-feed" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">Follow Us on Instagram <a href="https://www.instagram.com/rohitlaundry" target="_blank" class="brand-text-blue hover:underline">@rohitlaundry</a></h2>
+                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">Check out our latest work, offers, and customer stories.</p>
+                </div>
+                <div class="mt-12 relative w-full overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                    <div id="insta-slider-track" class="flex">
+                        <!-- Images will be injected here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center">
                     <h2 class="section-title">Why Choose Rohit Laundry?</h2>
                     <p class="section-subtitle mt-2 max-w-2xl mx-auto">We are not just a laundry service, we are your garment care experts.</p>
                 </div>
                 <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">Live Laundry Concept</h3>
                         <p class="mt-2 text-gray-600">We process your clothes in a clean, hygienic environment. You can visit our store to see our processes live.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">Eco-Friendly Cleaning</h3>
                         <p class="mt-2 text-gray-600">We use German, eco-friendly chemicals that are tough on stains but gentle on your clothes and the environment.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">Advanced Technology</h3>
                         <p class="mt-2 text-gray-600">Our store is equipped with world-class Italian machinery for the best cleaning, washing, and dry cleaning results.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">On-Time Delivery</h3>
                         <p class="mt-2 text-gray-600">We guarantee delivery within 48 hours, so you get your fresh, clean clothes back when you need them.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">Free Pickup & Delivery</h3>
                         <p class="mt-2 text-gray-600">Enjoy our hassle-free service with complimentary pickup and delivery from your doorstep.</p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover-lift">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover-lift">
                         <h3 class="service-title brand-text-blue">Affordable Prices</h3>
                         <p class="mt-2 text-gray-600">Get access to premium laundry and dry cleaning services at prices that won't break the bank.</p>
                     </div>
@@ -274,7 +277,7 @@
             </div>
         </section>
 
-        <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
+        <section id="testimonials" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center">
                     <h2 class="section-title">What Our Clients Say</h2>
@@ -283,7 +286,7 @@
                 <div class="mt-12 w-full overflow-hidden" style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);">
                     <div class="flex w-max animate-testimonial-scroll hover:[animation-play-state:paused]">
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"Rohit Laundry is our go-to partner for maintaining the high standards of hygiene at our salon..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/C4B5FD/FFFFFF?text=P" loading="lazy" alt="Testimonial from Purple Beauty and Salon for laundry service" class="w-12 h-12 rounded-full mr-4">
@@ -295,7 +298,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"For our premium sarees and garments, we only trust Rohit Laundry. Their steam press and dry cleaning services are unmatched..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/F472B6/FFFFFF?text=A" loading="lazy" alt="Ajmera Fashion review of dry clean and steam press" class="w-12 h-12 rounded-full mr-4">
@@ -307,7 +310,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4">
-                            <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"As a working professional, their free pickup and delivery is a lifesaver. My clothes always come back perfectly pressed..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/60A5FA/FFFFFF?text=R" loading="lazy" alt="Riya Patel's testimonial for laundry near me in Vesu" class="w-12 h-12 rounded-full mr-4">
@@ -319,7 +322,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4" aria-hidden="true">
-                            <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"Rohit Laundry is our go-to partner for maintaining the high standards of hygiene at our salon..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/C4B5FD/FFFFFF?text=P" loading="lazy" alt="Testimonial from Purple Beauty and Salon for laundry service" class="w-12 h-12 rounded-full mr-4">
@@ -331,7 +334,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4" aria-hidden="true">
-                             <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                             <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"For our premium sarees and garments, we only trust Rohit Laundry. Their steam press and dry cleaning services are unmatched..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/F472B6/FFFFFF?text=A" loading="lazy" alt="Ajmera Fashion review of dry clean and steam press" class="w-12 h-12 rounded-full mr-4">
@@ -343,7 +346,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-[90vw] md:w-[45vw] lg:w-[30vw] p-4" aria-hidden="true">
-                            <div class="bg-white p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
+                            <div class="bg-gray-50 p-8 rounded-lg shadow-lg h-full flex flex-col justify-between">
                                 <p class="text-gray-600 italic">"As a working professional, their free pickup and delivery is a lifesaver. My clothes always come back perfectly pressed..."</p>
                                 <div class="mt-4 flex items-center">
                                     <img src="https://placehold.co/50x50/60A5FA/FFFFFF?text=R" loading="lazy" alt="Riya Patel's testimonial for laundry near me in Vesu" class="w-12 h-12 rounded-full mr-4">
@@ -358,39 +361,6 @@
                 </div>
             </div>
         </section>
-        
-        <section id="contact" class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center">
-                    <h2 class="section-title">Visit Our Store or Schedule a Pickup</h2>
-                    <p class="section-subtitle mt-2 max-w-2xl mx-auto">We are conveniently located in the heart of Katargam.</p>
-                </div>
-                <div class="mt-12 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                    <div class="rounded-lg overflow-hidden shadow-2xl">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8654029004415!2d72.8280953!3d21.2371853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0cbf046c49%3A0xec4c872af100f02c!2sROHIT%20LAUNDRY!5e0!3m2!1sen!2sin!4v1755402192756!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rohit Laundry - Steam Press and Dry Clean near me in Katargam, Surat"></iframe>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
-                        <h3 class="service-title text-gray-800">Rohit Laundry, Katargam</h3>
-                        <p class="mt-4 text-gray-600 flex items-start">
-                            <svg class="w-6 h-6 mr-3 mt-1 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>Patel Park Society, Katargam, Surat, Gujarat 395004</span>
-                        </p>
-                        <p class="mt-4 text-gray-600 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            <a href="tel:+919601129595" class="hover:underline font-semibold">+91-9601129595</a>
-                        </p>
-                        <p class="mt-4 text-gray-600 flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <a href="mailto:rohitlaundry101@gmail.com" class="hover:underline font-semibold">rohitlaundry101@gmail.com</a>
-                        </p>
-                        <div class="mt-6">
-                            <a href="https://wa.me/919601129595?text=Hi%20Rohit%20Laundry,%20I%20want%20to%20schedule%20a%20pickup." target="_blank" class="brand-bg-green text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-block">Book on WhatsApp</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer class="bg-gray-800 text-white">
@@ -452,6 +422,44 @@
 
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Custom Instagram Slider
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('insta-slider-track');
+            if (track) {
+                const images = [
+                    "https://iili.io/FmdZ0DN.md.png",
+                    "https://iili.io/Fm2K2FR.md.png",
+                    "https://iili.io/Fm2Kf9I.md.png",
+                    "https://iili.io/Fm2K3ap.md.png",
+                    "https://iili.io/Fm2KF8N.md.png",
+                    "https://iili.io/Fm2Kucl.md.png",
+                    "https://iili.io/Fm2KYN9.md.png",
+                    "https://iili.io/Fm2KjN1.md.png"
+                ];
+
+                const createSlides = (imgArray) => {
+                    imgArray.forEach(url => {
+                        const div = document.createElement('div');
+                        div.className = 'flex-shrink-0 p-3';
+                        const img = document.createElement('img');
+                        img.src = url;
+                        img.loading = 'lazy';
+                        img.alt = 'Instagram post from Rohit Laundry in Surat';
+                        img.className = 'h-52 w-52 md:h-64 md:w-64 object-cover rounded-lg shadow-lg';
+                        div.appendChild(img);
+                        track.appendChild(div);
+                    });
+                };
+                
+                // Create two sets of slides for a seamless loop
+                createSlides(images);
+                createSlides(images);
+                
+                // Add animation class
+                track.classList.add('animate-infinite-scroll');
+            }
+        });
     </script>
     
     <!-- Tawk.to Script (Moved to the end for better performance) -->
