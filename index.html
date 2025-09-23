@@ -79,7 +79,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -100,7 +100,26 @@
         .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .nav-link { position: relative; padding-bottom: 4px; }
         .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #1E90FF; transition: width 0.3s ease; }
-        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+        @keyframes spin-once {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-once { animation: spin-once 1.5s ease-out; }
+
+        @keyframes infinite-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll { animation: infinite-scroll 40s linear infinite; }
+        #insta-slider-track:hover { animation-play-state: paused; }
+
+        @keyframes testimonial-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% / 2)); }
+        }
+        .animate-testimonial-scroll { animation: testimonial-scroll 60s linear infinite; }
     </style>
 
     <!-- JSON-LD Schema Markup -->
@@ -147,11 +166,11 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
-                <img src="https://i.postimg.cc/0yqCdvqG/Laundry-naer-me.png" alt="Rohit Laundry Logo" class="h-20 mr-3">
+                <img id="logo" src="https://i.postimg.cc/0yqCdvqG/Laundry-naer-me.png" alt="Rohit Laundry Logo" class="h-20 mr-3 animate-spin-once">
             </a>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-blue-600 font-bold">Home</a>
+                <a href="index.html" class="nav-link text-blue-600 font-bold active">Home</a>
                 <a href="services.html" class="nav-link text-gray-700 font-semibold hover:text-blue-600">Services</a>
                 <a href="blog.html" class="nav-link text-gray-700 font-semibold hover:text-blue-600">Blog</a>
                 <a href="#why-choose-us" class="nav-link text-gray-700 font-semibold hover:text-blue-600">Why Us</a>
@@ -226,8 +245,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- Custom Instagram Feed Slider -->
+        
         <section id="instagram-feed" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center">
@@ -276,7 +294,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="testimonials" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center">
@@ -361,6 +379,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="bg-gray-800 text-white">
@@ -456,7 +475,6 @@
                 createSlides(images);
                 createSlides(images);
                 
-                // Add animation class
                 track.classList.add('animate-infinite-scroll');
             }
         });
