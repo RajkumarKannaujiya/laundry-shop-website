@@ -8,11 +8,11 @@ Serve this directory as static files (for example with `python -m http.server 80
 
 ## Publish
 
-Deploy this directory to Netlify with the publish directory set to `.`. The existing production Netlify site already serves `laundrysurat.shop`; canonical, sitemap and structured-data URLs use that verified production domain. The root `index.html` also retains the existing Google Search Console verification tag and GA4 measurement ID.
+Deploy this directory to Netlify with the publish directory set to `.`. The production site uses the free Netlify address `https://rohit-laundry-katargam.netlify.app`. The previous `laundrysurat.shop` custom domain failed Netlify DNS verification and its certificate had expired, so it was removed from the project. Canonical, sitemap and structured-data URLs use the Netlify address. The existing GA4 measurement ID is retained; Google Search Console must be verified for this new URL before the sitemap can be submitted.
 
 ## Search Console and local SEO
 
-After the updated deployment is live, submit `https://laundrysurat.shop/sitemap.xml` in the existing Search Console property and request indexing for the primary language pages. Indexing and rankings update on Google’s schedule. Keep the Google Business Profile name, address and phone consistent with this site; request genuine customer reviews and add authentic shop photos. Search position is not guaranteed by any site build and varies with the searcher’s location, competition and Google’s local ranking signals.
+After the updated deployment is live, submit `https://rohit-laundry-katargam.netlify.app/sitemap.xml` in the existing Search Console property and request indexing for the primary language pages. Indexing and rankings update on Google’s schedule. Keep the Google Business Profile name, address and phone consistent with this site; request genuine customer reviews and add authentic shop photos. Search position is not guaranteed by any site build and varies with the searcher’s location, competition and Google’s local ranking signals.
 
 ## Business details to confirm before replacing a live site
 

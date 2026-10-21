@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://laundrysurat.shop/sitemap.xml
+Sitemap: https://rohit-laundry-katargam.netlify.app/sitemap.xml
