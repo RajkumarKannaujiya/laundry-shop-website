@@ -8,7 +8,7 @@ Serve this directory as static files (for example with `python -m http.server 80
 
 ## Publish
 
-Deploy this directory to Netlify with the publish directory set to `.`. The production site uses the free Netlify address `https://rohit-laundry-katargam.netlify.app`. The previous `laundrysurat.shop` custom domain failed Netlify DNS verification and its certificate had expired, so it was removed from the project. Canonical, sitemap and structured-data URLs use the Netlify address. The existing GA4 measurement ID is retained; Google Search Console must be verified for this new URL before the sitemap can be submitted.
+Deploy this directory to Netlify with the publish directory set to `.`. The production site uses the free Netlify address `https://rohit-laundry-katargam.netlify.app`. The previous `laundrysurat.shop` custom domain failed Netlify DNS verification and its certificate had expired, so it was removed from the project. Canonical, sitemap and structured-data URLs use the Netlify address. The existing GA4 measurement ID is retained; Google Search Console must be verified for this new URL before the sitemap can be submitted. An IndexNow key file is included to notify Bing and other participating search engines when pages change.
 
 ## Search Console and local SEO
 
